@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './login.less';
 
 export default class Login extends Component {
     constructor(props) {
@@ -9,7 +10,11 @@ export default class Login extends Component {
     }
     render () {
         return (
-            <div>{this.state.name}</div>
+            <div className="title">
+                {this.state.name}
+                <span className="title-name">liuchang</span>
+                <div className="title-img"></div>
+            </div>
         )
     }
 }

@@ -12,9 +12,23 @@ module.exports = {
     module: {
         rules: [
             { 
-                test: /\.js?/, 
+                test: /\.jsx?/, 
                 exclude: /node-modules/, 
                 use: 'babel-loader'
+            },
+            {
+                test: /\.less$/,
+                exclude: /node-modules/,
+                use: ['style-loader', 'css-loader', 'less-loader']
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 1024
+                    }
+                }]
             }
         ]
     },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter , Route } from 'react-router-dom';
 
-import Login from './../pages/login';
+import Login from './../pages/login/login';
 import Home from './../pages/home';
 
 let RouterObjectFn = () => {
